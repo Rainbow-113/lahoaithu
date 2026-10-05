@@ -1,0 +1,257 @@
+/* ==========================================================================
+   RESPONSIVE STYLES - MOBILE FIRST & DESKTOP OPTIMIZATION
+   ========================================================================== */
+
+/* Tablet & Smaller Screens (< 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .course-detail-panel {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 30px;
+  }
+
+  .course-visual img {
+    height: 280px;
+  }
+}
+
+/* Mobile & Small Tablets (< 768px) */
+@media (max-width: 768px) {
+  .hero-navy-floating-card{
+    bottom: -100px;                   /* Đổi từ -40px thành -65px (hoặc -70px để xuống thấp hơn) */
+   
+  }
+  .mentor-box {
+    grid-template-columns: 1fr !important;
+    padding: 24px 16px !important;
+    gap: 20px !important;
+  }
+
+  body {
+    padding-bottom: var(--mobile-nav-height);
+  }
+
+  .sticky-mobile-bar {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    flex-direction: column;
+    padding: 24px;
+    gap: 18px;
+    border-bottom: 2px solid var(--color-border);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-150%);
+    transition: transform var(--transition-normal);
+    z-index: 998;
+  }
+
+  .nav-menu.open {
+    transform: translateY(0);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-actions .nav-contact-btn {
+    display: none;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: 24px 0 60px 0;
+  }
+
+  .hero-fixed-card {
+    padding: 30px 20px;
+    border-radius: var(--radius-lg);
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.975rem;
+  }
+
+  .hero-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .lead-form-wrapper {
+    padding: 28px 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .course-price-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .course-price-cta-row .btn {
+    width: 100%;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Chia thành 2 cột đều nhau */
+    gap: 10px;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    padding: 12px 6px;
+    /* Giảm padding để vừa màn hình nhỏ */
+    font-size: 0.85rem;
+    /* Giảm nhẹ cỡ chữ trên điện thoại */
+    gap: 6px;
+  }
+/* Chuyển card cam kết sang dạng Grid 2 cột trên Mobile */
+  .commitment-card {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Cột 1: Icon, Cột 2: Tiêu đề H3 */
+    align-items: center;
+    column-gap: 14px;
+    row-gap: 10px;
+    padding: 20px 16px;
+  }
+  .commitment-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0;       /* Xóa khoảng cách dưới để thẳng hàng với H3 */
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .commitment-icon-wrapper svg {
+    width: 22px;
+    height: 22px;
+  }
+  .commitment-title {
+    margin-bottom: 0;       /* Xóa khoảng cách dưới */
+    font-size: 1.1rem;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .commitment-desc {
+    grid-column: 1 / -1;     /* Đoạn mô tả tự động trải dài full hàng bên dưới */
+    font-size: 0.9rem;
+  }
+   /* Chia 4 tab khoá học thành 2 cột (2 cái / 1 dòng) trên Mobile */
+  .course-tabs-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 cột đều nhau */
+    gap: 10px;                       /* Khoảng cách giữa các nút */
+    margin-bottom: 25px;
+  }
+  .course-tab-btn {
+    width: 100%;
+    padding: 12px 6px;               /* Giảm padding để vừa vặn */
+    font-size: 0.85rem;              /* Giảm nhẹ cỡ chữ trên mobile */
+    justify-content: center;
+    text-align: center;
+    border-radius: var(--radius-md); /* Bo góc thanh lịch */
+  }
+/* Hiệu ứng Accordion thu gọn Footer trên Mobile */
+  .footer-toggle-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 12px 0;
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .footer-toggle-title .toggle-icon {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #60A5FA;
+    transition: transform 0.2s ease;
+  }
+  /* Mặc định trên Mobile ẩn danh sách con đi để gọn thành 1 dòng */
+  .footer-accordion .footer-links {
+    display: none;
+    padding-top: 12px;
+    padding-left: 6px;
+  }
+  /* Khi nhấn mở thì hiện danh sách và đổi dấu + thành - */
+  .footer-accordion.open .footer-links {
+    display: block;
+  }
+  .footer-accordion.open .toggle-icon {
+    transform: rotate(45deg); /* Xoay dấu + thành dấu x hoặc - */
+    color: #F59E0B;
+  }
+}
+
+/* Extra Small Phones (< 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.65rem;
+  }
+
+  .hero-metrics-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .metric-number {
+    font-size: 1.45rem;
+  }
+
+  .metric-label {
+    font-size: 0.72rem;
+  }
+
+  .course-tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+
+}

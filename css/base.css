@@ -1,0 +1,262 @@
+/* ==========================================================================
+   BASE STYLES, TYPOGRAPHY & UTILITIES - LAHOAITHU ACADEMY
+   ========================================================================== */
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  padding-bottom: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-title);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2.2rem, 4vw + 1rem, 3.5rem); }
+h2 { font-size: clamp(1.8rem, 3vw + 0.5rem, 2.6rem); }
+h3 { font-size: clamp(1.3rem, 2vw + 0.2rem, 1.75rem); }
+h4 { font-size: 1.25rem; }
+p { margin-bottom: 1rem; }
+p:last-child { margin-bottom: 0; }
+
+strong { font-weight: 700; color: var(--color-text-title); }
+
+/* Layout Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section {
+  padding: 85px 0;
+  position: relative;
+}
+
+.section-alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section-subtle {
+  background-color: var(--color-bg-subtle);
+}
+
+.section-dark {
+  background-color: var(--color-bg-dark);
+  color: #E2E8F0;
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: #FFFFFF;
+}
+
+/* Section Header Styles */
+.section-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 55px auto;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.825rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  background-color: var(--color-brand-blue-light);
+  color: var(--color-brand-blue);
+  border: 1px solid rgba(0, 102, 255, 0.15);
+}
+
+.section-badge.gold {
+  background-color: var(--color-gold-light);
+  color: var(--color-gold-dark);
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+.section-badge.emerald {
+  background-color: var(--color-emerald-light);
+  color: var(--color-emerald-dark);
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.section-title {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.section-title span.highlight {
+  background: linear-gradient(135deg, #0066FF 0%, #00C6FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title span.gold-highlight {
+  background: linear-gradient(135deg, #D97706 0%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-desc {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.975rem;
+  transition: all var(--transition-fast);
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.35);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1A75FF 0%, #0045AD 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 102, 255, 0.45);
+  color: #FFFFFF;
+}
+
+.btn-zalo {
+  background: linear-gradient(135deg, #0068FF 0%, #0051C7 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 104, 255, 0.35);
+}
+
+.btn-zalo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 104, 255, 0.5);
+  color: #FFFFFF;
+}
+
+.btn-fb {
+  background: linear-gradient(135deg, #1877F2 0%, #0D5EC5 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(24, 119, 242, 0.35);
+}
+
+.btn-fb:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(24, 119, 242, 0.5);
+  color: #FFFFFF;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(245, 158, 11, 0.5);
+  color: #FFFFFF;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-border);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-brand-blue);
+  color: var(--color-brand-blue);
+  background-color: var(--color-brand-blue-light);
+  transform: translateY(-2px);
+}
+
+.btn-outline-white {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline-white:hover {
+  background-color: #FFFFFF;
+  color: var(--color-primary);
+  border-color: #FFFFFF;
+}
+
+.btn-lg {
+  padding: 16px 34px;
+  font-size: 1.05rem;
+  border-radius: var(--radius-md);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+/* Floating Badges & Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 102, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(0, 102, 255, 0);
+  }
+}
+
+.pulse-animation {
+  animation: pulseGlow 2.2s infinite;
+}
+
+@keyframes floatAnim {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float-animation {
+  animation: floatAnim 4s ease-in-out infinite;
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: 28px;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
